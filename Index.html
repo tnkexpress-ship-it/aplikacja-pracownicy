@@ -1,4 +1,3 @@
-# aplikacja-pracownicy
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -110,41 +109,3 @@
 
 </body>
 </html>
-// firebase-config.js
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
-import { getStorage } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-storage.js";
-
-const firebaseConfig = {
-  apiKey: "TWÓJ_API_KEY",
-  authDomain: "TWÓJ_PROJEKT.firebaseapp.com",
-  projectId: "TWÓJ_PROJEKT",
-  storageBucket: "TWÓJ_PROJEKT.appspot.com",
-  messagingSenderId: "TWÓJ_ID",
-  appId: "TWÓJ_APP_ID"
-};
-
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const storage = getStorage(app);
-{
-  "userId": "ID_pracownika",
-  "url": "link_do_storage",
-  "description": "Opis zdjęcia",
-  "timestamp": "data dodania"
-}
-{
-  "email": "pracownik@firma.com",
-  "role": "employee", // lub "admin"
-  "points": 0,
-  "salary": 0
-}
-/app
- ├─ index.html         // strona logowania
- ├─ employee.html      // panel pracownika
- ├─ admin.html         // panel administratora
- ├─ main.js            // wspólny JS dla logowania i paneli
- ├─ firebase-config.js // konfiguracja Firebase
- └─ style.css          // style dla wszystkich stron
